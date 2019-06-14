@@ -294,18 +294,18 @@ const netProfit = sumPurchases + transactions.filter(transaction => transaction.
 console.log( 'The net profit is:', netProfit );
 
 
-// // --------------------------------------------------
-// // QUESTION 11
-// // --------------------------------------------------
-// /*
-//   Calculate the most items sold as part of single transaction.
+// --------------------------------------------------
+// QUESTION 11
+// --------------------------------------------------
+/*
+  Calculate the most items sold as part of single transaction.
 
-//   HINTS:
-//   - The result of this calculation should be a number (not an array, object, or other data type).
-// */
-// const mostItems;
+  HINTS:
+  - The result of this calculation should be a number (not an array, object, or other data type).
+*/
+const mostItems = transactions.filter(transaction => transaction.type == 'sale').map(transaction => transaction.items.length).reverse()[0];
 
-// console.log( 'The most items sold in a single transaction is:', mostItems );
+console.log( 'The most items sold in a single transaction is:', mostItems );
 
 
 // // --------------------------------------------------
