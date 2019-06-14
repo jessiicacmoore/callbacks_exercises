@@ -246,18 +246,18 @@ const bigSpenders = transactions.filter(transaction => transaction.type == 'sale
 console.log( 'The "big spenders" are:', bigSpenders );
 
 
-// // --------------------------------------------------
-// // QUESTION 08
-// // --------------------------------------------------
-// /*
-//   Calculate the sum of the *first* 'sale' transaction.
+// --------------------------------------------------
+// QUESTION 08
+// --------------------------------------------------
+/*
+  Calculate the sum of the *first* 'sale' transaction.
 
-//   HINT(S):
-//   - Transactions don't have 'prices', but their 'items' do!
-// */
-// const sumFirstSale;
+  HINT(S):
+  - Transactions don't have 'prices', but their 'items' do!
+*/
+const sumFirstSale = transactions.filter(transaction => transaction.type == 'sale')[0].items.map(item => item.price).reduce((a,b) => a + b, 0);
 
-// console.log( 'The sum of the first sale items is:', sumFirstSale );
+console.log( 'The sum of the first sale items is:', sumFirstSale );
 
 
 // // --------------------------------------------------
