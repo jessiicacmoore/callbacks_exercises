@@ -210,39 +210,40 @@ const allVendors = transactions.filter(transaction => transaction.type == 'purch
 console.log( 'The vendors are:', allVendors );
 
 
-// // --------------------------------------------------
-// // QUESTION 06
-// // --------------------------------------------------
-// /*
-//   Create an array that includes all of the *unique* customers which appear in the transactions data set.
-//   eg. `[ 'customer one', 'customer two', ... ]
+// --------------------------------------------------
+// QUESTION 06
+// --------------------------------------------------
+/*
+  Create an array that includes all of the *unique* customers which appear in the transactions data set.
+  eg. `[ 'customer one', 'customer two', ... ]
 
-//   HINT(S):
-//   - Not all transactions have a 'customer'!
-//   - The assembled array should be made up of strings, not full `transaction` objects.
-//   - Make sure that the resulting array *does not* include any duplicates.
-// */
-// const uniqueCustomers;
+  HINT(S):
+  - Not all transactions have a 'customer'!
+  - The assembled array should be made up of strings, not full `transaction` objects.
+  - Make sure that the resulting array *does not* include any duplicates.
+*/
 
-// console.log( 'The unique customers are:', uniqueCustomers );
+const uniqueCustomers = Array.from(new Set(transactions.filter(transaction => transaction.type == 'sale').map(transaction => transaction.customer)));
+
+console.log( 'The unique customers are:', uniqueCustomers );
 
 
-// // --------------------------------------------------
-// // QUESTION 07
-// // --------------------------------------------------
-// /*
-//   Create an array of information about the 'sale' transactions which include 5 or more items.
+// --------------------------------------------------
+// QUESTION 07
+// --------------------------------------------------
+/*
+  Create an array of information about the 'sale' transactions which include 5 or more items.
 
-//   The array should resemble the following:
-//   [ { name: 'Customer Name', numItems: 5 }, ... ]
+  The array should resemble the following:
+  [ { name: 'Customer Name', numItems: 5 }, ... ]
 
-//   HINT(S):
-//   - There may be more than 1 'sale' that includes 5 or more items.
-//   - Individual transactions do not have either `name` or `numItems` properties, we'll have to add them to the output.
-// */
-// const bigSpenders;
+  HINT(S):
+  - There may be more than 1 'sale' that includes 5 or more items.
+  - Individual transactions do not have either `name` or `numItems` properties, we'll have to add them to the output.
+*/
+const bigSpenders;
 
-// console.log( 'The "big spenders" are:', bigSpenders );
+console.log( 'The "big spenders" are:', bigSpenders );
 
 
 // // --------------------------------------------------
