@@ -165,18 +165,18 @@ const numPurchases = transactions.filter(transaction => transaction.type == 'pur
 console.log( 'The total number of purchases is:', numPurchases );
 
 
-// // --------------------------------------------------
-// // QUESTION 03
-// // --------------------------------------------------
-// /*
-//   Calculate the total number of 'cash' 'sales'.
+// --------------------------------------------------
+// QUESTION 03
+// --------------------------------------------------
+/*
+  Calculate the total number of 'cash' 'sales'.
 
-//   HINT(S):
-//   - Don't forget that 'purchases' can also be made in 'cash'!
-// */
-// const numCashSales;
+  HINT(S):
+  - Don't forget that 'purchases' can also be made in 'cash'!
+*/
+const numCashSales = transactions.filter(transaction => transaction.type == 'sale' && transaction.paymentMethod == 'cash').length;
 
-// console.log( 'The total number of cash sales is:', numCashSales );
+console.log( 'The total number of cash sales is:', numCashSales );
 
 
 // // --------------------------------------------------
