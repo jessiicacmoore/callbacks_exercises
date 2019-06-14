@@ -260,38 +260,38 @@ const sumFirstSale = transactions.filter(transaction => transaction.type == 'sal
 console.log( 'The sum of the first sale items is:', sumFirstSale );
 
 
-// // --------------------------------------------------
-// // QUESTION 09
-// // --------------------------------------------------
-// /*
-//   Calculate the sum of *all* 'purchase' transactions.
+// --------------------------------------------------
+// QUESTION 09
+// --------------------------------------------------
+/*
+  Calculate the sum of *all* 'purchase' transactions.
 
-//   HINT(S):
-//   - Your solution to 'QUESTION 08' is a good starting point!
-//   - Make sure to include 'price' information from *all* purchases.
-// */
+  HINT(S):
+  - Your solution to 'QUESTION 08' is a good starting point!
+  - Make sure to include 'price' information from *all* purchases.
+*/
 
-// const sumPurchases;
+const sumPurchases = transactions.filter(transaction => transaction.type == 'purchase').map(transaction => transaction.items.map(item => item.price)).flat().reduce((a,b) => a + b, 0);
 
-// console.log( 'The sum of all purchases is:', sumPurchases );
+console.log( 'The sum of all purchases is:', sumPurchases );
 
 
-// // --------------------------------------------------
-// // QUESTION 10
-// // --------------------------------------------------
-// /*
-//   Calculate the company's net profit.
+// --------------------------------------------------
+// QUESTION 10
+// --------------------------------------------------
+/*
+  Calculate the company's net profit.
 
-//   This number will be positive if the sum of the sales is greater than the amount spent on purchases.
+  This number will be positive if the sum of the sales is greater than the amount spent on purchases.
 
-//   Otherwise, this number will be negative.
+  Otherwise, this number will be negative.
 
-//   HINT(S):
-//   - Unlike 'QUESTION 08' and 'QUESTION 09', here we're interested in both 'sale' and 'purchase' transactions.
-// */
-// const netProfit;
+  HINT(S):
+  - Unlike 'QUESTION 08' and 'QUESTION 09', here we're interested in both 'sale' and 'purchase' transactions.
+*/
+const netProfit;
 
-// console.log( 'The net profit is:', netProfit );
+console.log( 'The net profit is:', netProfit );
 
 
 // // --------------------------------------------------
