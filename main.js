@@ -193,21 +193,21 @@ const numCreditPurchases = transactions.filter(transaction => transaction.type =
 console.log( 'The total number of credit purchases is:', numCreditPurchases );
 
 
-// // --------------------------------------------------
-// // QUESTION 05
-// // --------------------------------------------------
-// /*
-//   Create an array that includes all of vendors which appear in the transactions data set.
-//   eg. `[ 'vendor one', 'vendor two', ... ]
+// --------------------------------------------------
+// QUESTION 05
+// --------------------------------------------------
+/*
+  Create an array that includes all of vendors which appear in the transactions data set.
+  eg. `[ 'vendor one', 'vendor two', ... ]
 
-//   HINT(S):
-//   - Not all transactions have a 'vendor'!
-//   - The assembled array should be made up of strings, not full `transaction` objects.
-//   - This array is allowed to contain duplicate values.
-// */
-// const allVendors;
+  HINT(S):
+  - Not all transactions have a 'vendor'!
+  - The assembled array should be made up of strings, not full `transaction` objects.
+  - This array is allowed to contain duplicate values.
+*/
+const allVendors = transactions.filter(transaction => transaction.type == 'purchase').map(transaction => transaction.vendor);
 
-// console.log( 'The vendors are:', allVendors );
+console.log( 'The vendors are:', allVendors );
 
 
 // // --------------------------------------------------
