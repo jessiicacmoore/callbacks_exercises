@@ -289,7 +289,7 @@ console.log( 'The sum of all purchases is:', sumPurchases );
   HINT(S):
   - Unlike 'QUESTION 08' and 'QUESTION 09', here we're interested in both 'sale' and 'purchase' transactions.
 */
-const netProfit;
+const netProfit = sumPurchases + transactions.filter(transaction => transaction.type == 'sale').map(transaction => transaction.items.map(item => item.price)).flat().reduce((a,b) => a + b, 0);
 
 console.log( 'The net profit is:', netProfit );
 
