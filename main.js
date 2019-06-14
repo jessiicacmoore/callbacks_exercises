@@ -154,15 +154,15 @@ const numSales = transactions.filter(transaction => transaction.type == 'sale').
 console.log( 'The total number of sales is:', numSales );
 
 
-// // --------------------------------------------------
-// // QUESTION 02
-// // --------------------------------------------------
-// /*
-//   Calculate the total number of 'purchases'.
-// */
-// const numPurchases = ;
+// --------------------------------------------------
+// QUESTION 02
+// --------------------------------------------------
+/*
+  Calculate the total number of 'purchases'.
+*/
+const numPurchases = transactions.filter(transaction => transaction.type == 'purchase').length;
 
-// console.log( 'The total number of purchases is:', numPurchases );
+console.log( 'The total number of purchases is:', numPurchases );
 
 
 // // --------------------------------------------------
